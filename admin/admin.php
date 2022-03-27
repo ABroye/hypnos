@@ -3,34 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Gestion des employés</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        .wrapper{
-            width: 1440px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 200px;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();   
-        });
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper-admin">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Détails des employés</h2>
-                        <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Ajouter un employé</a>
+                        <h2>Détails des gérant(e)s</h2>
+                        <a href="create.php" class="btn btn-success float-end"><i class="fa fa-plus"></i> Ajouter un gérant(e)</a>
                     </div>
                     <?php
                     // Include config file
@@ -64,8 +47,8 @@
                                         echo "<td>" . $row['city'] . "</td>";
                                         echo "<td>" . $row['salary'] . "</td>";
                                         echo "<td>";
-                                            echo '<a href="read-user.php?id='. $row['id'] .'" class="mr-3" title="Voir la fiche" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="update-users.php?id='. $row['id'] .'" class="mr-3" title="Mettre à jour la fiche" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                            echo '<a href="read-user.php?id='. $row['id'] .'" class="me-3" title="Voir la fiche" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
+                                            echo '<a href="update-users.php?id='. $row['id'] .'" class="me-3" title="Mettre à jour la fiche" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                             echo '<a href="delete.php?id='. $row['id'] .'" title="Supprimé la fiche" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                         echo "</td>";
                                     echo "</tr>";
@@ -84,10 +67,17 @@
                     // Close connection
                     unset($pdo);
                     ?>
-                    <a href="logout.php" class="btn btn-danger ml-3 pull-right">Déconnexion</a>
+                    <a href="logout.php" class="btn btn-danger ms-3 float-end">Déconnexion</a>
                 </div>
             </div>        
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0f3ecde558.js" crossorigin="anonymous"></script>
 </body>
 </html>
