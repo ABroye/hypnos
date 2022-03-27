@@ -164,55 +164,50 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
 <head>
     <meta charset="UTF-8">
     <title>Mettre à jour une fiche employé</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .wrapper{
-            width: 600px;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Mettre à jour une fiche employé</h2>
-                    <p>Veuillez modifier le formulaire pour mettre à jour le dossier de l'employé.</p>
+                    <h2 class="mt-5">Mettre à jour une fiche gérant(e)</h2>
+                    <p>Veuillez modifier le formulaire pour mettre à jour la fiche gérant(e).</p>
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Prénom :</label>
                             <input type="text" name="firstname" class="form-control <?php echo (!empty($firstname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $firstname; ?>">
                             <span class="invalid-feedback"><?php echo $firstname_err;?></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Nom :</label>
                             <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                             <span class="invalid-feedback"><?php echo $name_err;?></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Adresse postale :</label>
                             <textarea name="address" class="form-control <?php echo (!empty($address_err)) ? 'is-invalid' : ''; ?>"><?php echo $address; ?></textarea>
                             <span class="invalid-feedback"><?php echo $address_err;?></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Code postal :</label>
                             <input type="text" name="zipcode" class="form-control <?php echo (!empty($zipcode_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $zipcode; ?>">
                             <span class="invalid-feedback"><?php echo $zipcode_err;?></span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label>Ville :</label>
                             <input type="text" name="city" class="form-control <?php echo (!empty($city_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $city; ?>">
                             <span class="invalid-feedback"><?php echo $city_err;?></span>
                         </div>
 
-                        <div class="form-group">
-                            <label>Salary</label>
+                        <div class="form-group mb-3">
+                            <label>Salaire :</label>
                             <input type="text" name="salary" class="form-control <?php echo (!empty($salary_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $salary; ?>">
                             <span class="invalid-feedback"><?php echo $salary_err;?></span>
                         </div>
