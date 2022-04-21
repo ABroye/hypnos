@@ -1,0 +1,282 @@
+/**********************************************************************************************************************/
+/********************************************      iPhone portrait  xs      ********************************************/
+/**********************************************************************************************************************/
+@media (min-width: 1px) and (max-width: 575.98px) {
+
+  .navbar-brand{
+    font-size: small;
+  }
+
+  .phone{
+    display: none !important;
+  }
+
+  #account-1{
+    display: none;
+  }
+
+  .icon{
+    height: 26px;
+    width: 26px;
+  }
+
+  h2{
+    font-size: medium;
+    padding-top: 8px
+  }
+
+  h4{
+    font-size: medium;
+  }
+
+  p{
+    font-size: small;
+  }
+
+  .top{
+    font-size: small;
+  }
+  
+  .carousel{
+    top: 28px;
+  }
+
+  #header{
+    margin-top: 28px;
+  }
+  
+  .label{
+    font-size: small;
+    text-align: start;
+    margin-top: 0;
+  }  
+
+  #placeholder{
+    font-size: small;
+  }
+
+  .container{
+    margin: 0 !important;
+  }
+
+}
+
+/**********************************************************************************************************************/
+/********************************************       iPhone paysage sm      ********************************************/
+/**********************************************************************************************************************/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .carousel{
+    top: 28px;
+  }
+
+  #account-1{
+    display: none;
+  }
+
+  .icon{
+    height: 26px;
+    width: 26px;
+  }
+
+  h2{
+    font-size: medium;
+    padding-top: 8px
+  }
+
+  .top{
+    font-size: small;
+  }
+  
+  #header{
+    margin-top: 28px;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }  
+  
+}
+
+/**********************************************************************************************************************/
+/********************************************       iPad portrait md       ********************************************/
+/**********************************************************************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  .fa-user-lock{
+    margin-right: 0.2rem;
+  }
+
+  .carousel{
+    top: 28px;
+  }
+
+  #account-1{
+    display: none;
+  }
+
+  .icon{
+    height: 26px;
+    width: 26px;
+  }
+
+  .top{
+    font-size: small;
+  }
+  
+  #header{
+    margin-top: 28px;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }  
+  
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .d-small{
+    display: none;
+  }
+
+}
+
+/**********************************************************************************************************************/
+/********************************************        iPad paysage lg       ********************************************/
+/**********************************************************************************************************************/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .fa-user-lock{
+    margin-top: 0.8rem;
+  }
+
+  .carousel{
+    top: 28px;
+  }
+
+  #account{
+    display: none;
+  }
+
+  .top{
+    font-size: small;
+  }
+  
+  #header{
+    margin-top: 28px;
+  }
+
+  .offcanvas{
+    display: none;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }  
+  
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .d-small{
+    display: none;
+  }
+
+}
+
+/**********************************************************************************************************************/
+/********************************************           Écrans xl          ********************************************/
+/**********************************************************************************************************************/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+  #account{
+    display: none;
+  }
+
+  .top{
+    font-size: small;
+  }
+
+  .carousel{
+    top: 28px;
+  }
+
+  #header{
+    margin-top: 28px;
+  }
+
+  .offcanvas{
+    display: none;
+  }
+  
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }  
+  
+  .footer{
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .d-small{
+    display: none;
+  }
+
+}
+
+/**********************************************************************************************************************/
+/********************************************           Écrans xxl          *******************************************/
+/**********************************************************************************************************************/
+@media (min-width: 1400px) {
+
+  #account{
+    display: none;
+  }
+
+  .top{
+    font-size: small;
+  }
+  
+  .carousel{
+    top: 28px;
+  }
+  
+  .offcanvas{
+    display: none;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }  
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #header{
+    top: 28px;
+  }
+
+  .d-small{
+    display: none;
+  }
+
+}

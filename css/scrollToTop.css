@@ -1,0 +1,50 @@
+/* Scroll To Top */
+.scroll{
+  cursor: pointer;
+  width: 53px;
+  height: 53px;
+  position: fixed;
+  bottom: 60px;
+  right: -80px;
+  border-radius: 100%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(192, 164, 113,1) 0%, rgba(175, 152, 99,1) 81.3% );
+  color: #fff;
+  font-size: 33px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 5px 0px #888;
+  transition: 300ms;
+  z-index: 9999;
+}
+
+.scroll i{
+  margin-top: 10px;
+  text-shadow: 0 0 2px #fff
+}
+
+.scroll:hover i{
+  animation-name: rotate;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate
+}
+
+@keyframes rotate{
+  from {margin-top: 15px}
+  to {margin-top: 5px}
+}
+
+.visible{
+  right: 15px;
+  transition: all 400ms;
+  transform: rotate(360deg)
+}
+
+@media (max-width:575.98px) {
+
+  .scroll{
+    width: 40px;
+    height: 40px;
+    font-size: 25px
+  }
+}

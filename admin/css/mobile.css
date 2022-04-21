@@ -1,0 +1,120 @@
+/* iPhone portrait */
+@media (min-width: 1px) and (max-width: 575.98px) {
+    
+  .card-signin {
+    width: 100%;
+  }
+  
+  .input{
+    width: 100%;
+  }
+
+  h2{
+    font-size: large;
+  }
+
+  footer{
+    font-size: small;
+  }
+}
+/* iPhone paysage */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    
+  .card-signin {
+    width: 80%;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }
+  
+  .input{
+    width: 100%;
+  }
+
+  h2{
+    font-size: medium;
+  }
+
+}
+/* iPad portrait */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+  .card-signin {
+    width: 70%;
+  }
+
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }
+  
+  .input{
+    width: 100%;
+  }
+
+  .footer{
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+/* iPad paysage */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .card-signin {
+    width: 50%;
+  }
+
+  .input{
+    width: 100% !important;
+  }  
+  
+  .label{
+    text-align: start;
+    margin-top: 0;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+/* MacBook Air */ 
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  
+  .input{
+    width: 80%;
+  }
+  
+  .label-xl{
+    text-align: start;
+    margin-top: 0 !important;
+  }
+
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+/* iMac et autres grands écrans */ 
+@media (min-width: 1400px) {
+  
+  .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

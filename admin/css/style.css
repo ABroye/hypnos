@@ -1,0 +1,197 @@
+/* 
+Couleur OR foncé #AF9863
+Couleur OR clair #C0A471 RGB (192, 164,113) */
+
+/* Police du logo */
+@font-face {
+  font-family: 'tostada';
+  src:  url('../fonts/tostada-webfont.woff') format('woff'),
+        url('../fonts/tostada-webfont.woff2') format('woff2');
+
+  font-weight: normal;
+  font-style: normal
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 100%;
+  overflow-x: hidden;
+  z-index: 0
+}
+
+html {
+  scrollbar-width: none
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.logo{
+  top: 10;
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  padding-top: 0;
+  padding-bottom: 14px;
+}
+
+h2{
+  color: #AF9863;
+  margin-bottom: 0 !important;
+}
+h3 {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #FFFFFF
+}
+
+a {
+  color: #AF9863;
+  text-decoration: none
+}
+
+.tostada {
+  color: #FFFFFF;
+  font-family: tostada !important
+}
+
+.tostada-signin {
+  color: #AF9863;
+  font-family: tostada !important
+}
+
+.form-control {
+  border: 1px solid rgb(192, 164, 113)
+}
+
+.form-control:focus {
+  border-color: rgba(192, 164, 113, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(192, 164, 113, 0.8)
+}
+
+.form-check-input {
+  border: 1px solid rgba(192, 164, 113, 0.50)
+}
+
+.form-check-input:focus {
+  border-color: rgb(192, 164, 113);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(192, 164, 113, 0.8)
+}
+
+.form-check-input:checked {
+  background-color: rgb(192, 164, 113);
+  border-color: rgb(192, 164, 113)
+}
+
+.btn-hypnos {
+  color: rgb(192, 164, 113);
+  background-color: #fff;
+  border-color: rgb(192, 164, 113)
+}
+
+.btn-hypnos:hover {
+  color: #fff;
+  background-color: rgb(192, 164, 113);
+  border-color: rgb(192, 164, 113)
+}
+
+.btn-check:focus + .btn-hypnos, .btn-hypnos:focus {
+  color: #fff;
+  background-color: rgb(192, 164, 113);
+  border-color: rgb(192, 164, 113);
+  box-shadow: 0 0 0 0.25rem rgba(192, 164, 113, 0.5)
+}
+
+.link{
+  color: #AF9863;
+  text-decoration: none
+}
+
+.link:hover {
+  color: #C0A471;
+  text-decoration: none
+}
+
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+    color: #fff;
+    background-color: #AF9863 !important
+}
+
+.title h1 {
+  font-size: 35px
+}
+
+.title h1 a {
+  text-transform: uppercase
+}
+
+.bg-gold {
+  background-color: rgba(192, 164, 113, 0.8)
+}
+
+.admin {
+  padding-top: 8px
+}
+
+.card-signin {
+  width: 40%;
+  margin: auto
+}
+.card-dash {
+  min-width: 184px;
+  min-height: 184px;
+  max-width: 184px;
+  max-height: 184px;
+  text-decoration: none;
+  background: rgba(192, 164, 113, 0.8);
+  text-align: center;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-dash:hover {
+  background: #AF9863
+}
+
+svg {
+  fill: white;
+  width: 4em;
+  height: 4em;
+  vertical-align: -0.125em;
+  margin-top: 1rem
+}
+
+svg.svg-inline--fa{
+  margin-top: 0;
+}
+thead{
+  background:rgb(192, 164, 113)
+}
+
+th{
+  color: #FFFFFF;
+  width: auto
+}
+
+.label{
+  width: 20%;
+  text-align: end;
+  margin-top: 0;
+}  
+
+.firstimg {
+  border: 3px solid rgb(192, 164, 113);
+}
+
+.wrapper-admin{
+  width: 100%;
+  margin: 0 auto
+}
+table tr td:last-child{
+  width: 200px
+}
