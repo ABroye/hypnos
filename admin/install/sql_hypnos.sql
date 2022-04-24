@@ -1,11 +1,11 @@
-create database if not exists sql_hypnos ;-- phpMyAdmin SQL Dump
--- version 5.0.4
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : ven. 22 avr. 2022 à 01:13
--- Version du serveur :  10.6.7-MariaDB-log
--- Version de PHP : 8.0.16
+-- Hôte : localhost:8889
+-- Généré le : dim. 24 avr. 2022 à 08:06
+-- Version du serveur : 5.7.34
+-- Version de PHP : 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,8 +33,8 @@ CREATE TABLE `admin` (
   `lastname` varchar(100) NOT NULL,
   `UserName` varchar(100) DEFAULT NULL,
   `Password` varchar(100) DEFAULT NULL,
-  `createdate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updatedate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updatedate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -66,13 +66,13 @@ CREATE TABLE `managers` (
 --
 
 INSERT INTO `managers` (`id`, `firstname`, `lastname`, `address`, `zipcode`, `city`, `email`, `password`) VALUES
-(1, 'Charles', 'De Pontignac', '1 Boulevard de la Reine', '78000', 'Versailles', 'c.de-pontignac@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(2, 'Eva', 'Gunther', '43 Boulevard de la Plage', '33120', 'Arcachon', 'e.gunther@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(3, 'Alice', 'Shepard', '41 Rue Branda', '29200', 'Brest', 'a.shepard@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(4, 'Li', 'Lungfan', '10 Rue des Allobroges', '74120', 'Megève', 'l.lungfan@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(5, 'Anges', 'Martin', '3 Rue la Fontaine', '06400', 'Cannes', 'a.martin@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(6, 'Éric', 'Turpin', '112 Rue Victor Hugo', '14800', 'Deauville', 'e.turpin@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
-(7, 'Julie', 'Hieronimus', '3 rue gambetta', '64000', 'Pau', 'j.hieronimus@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a');
+(1, 'Eva', 'Gunther', '43 Boulevard de la Plage', '33120', 'Arcachon', 'e.gunther@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(2, 'Alice', 'Shepard', '41 Rue Branda', '29200', 'Brest', 'a.shepard@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(3, 'Anges', 'Martin', '3 Rue la Fontaine', '06400', 'Cannes', 'a.martin@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(4, 'Éric', 'Turpin', '112 Rue Victor Hugo', '14800', 'Deauville', 'e.turpin@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(5, 'Li', 'Lungfan', '10 Rue des Allobroges', '74120', 'Megève', 'l.lungfan@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(6, 'Julie', 'Hieronimus', '3 rue gambetta', '64000', 'Pau', 'j.hieronimus@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a'),
+(7, 'Charles', 'De Pontignac', '1 Boulevard de la Reine', '78000', 'Versailles', 'c.de-pontignac@hypnos-group.com', 'f0258b6685684c113bad94d91b8fa02a');
 
 -- --------------------------------------------------------
 
@@ -87,8 +87,8 @@ CREATE TABLE `msg` (
   `emailid` varchar(100) DEFAULT NULL,
   `phonenumber` char(15) DEFAULT NULL,
   `subject` varchar(100) DEFAULT NULL,
-  `message` mediumtext DEFAULT NULL,
-  `postingdate` timestamp NULL DEFAULT current_timestamp(),
+  `message` mediumtext,
+  `postingdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `status` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -109,10 +109,10 @@ CREATE TABLE `msg_users` (
   `id` int(11) NOT NULL,
   `useremail` varchar(100) DEFAULT NULL,
   `request` varchar(100) DEFAULT NULL,
-  `message` mediumtext DEFAULT NULL,
-  `postingdate` timestamp NULL DEFAULT current_timestamp(),
-  `responseresort` mediumtext DEFAULT NULL,
-  `responsedate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `message` mediumtext,
+  `postingdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `responseresort` mediumtext,
+  `responsedate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -120,8 +120,8 @@ CREATE TABLE `msg_users` (
 --
 
 INSERT INTO `msg_users` (`id`, `useremail`, `request`, `message`, `postingdate`, `responseresort`, `responsedate`) VALUES
-(20, 'alain.broye39@gmail.com', 'Réclamation', 'Réclamation du 20/04/2022 à 20h16', '2022-04-20 18:16:40', NULL, NULL),
-(21, 'alain.broye39@gmail.com', 'Service supplémentaire', 'Commande du 20/0402022 à 20h17', '2022-04-20 18:17:14', NULL, NULL);
+(20, 'user@gmail.com', 'Réclamation', 'Réclamation du 20/04/2022 à 20h16', '2022-04-20 18:16:40', NULL, '2022-04-22 09:02:29'),
+(21, 'user@gmail.com', 'Service supplémentaire', 'Commande du 20/0402022 à 20h17', '2022-04-20 18:17:14', NULL, '2022-04-22 09:02:35');
 
 -- --------------------------------------------------------
 
@@ -132,7 +132,7 @@ INSERT INTO `msg_users` (`id`, `useremail`, `request`, `message`, `postingdate`,
 CREATE TABLE `pages` (
   `id` int(11) NOT NULL,
   `type` varchar(255) DEFAULT '',
-  `detail` longtext DEFAULT NULL
+  `detail` longtext
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -161,9 +161,9 @@ CREATE TABLE `pages_resort` (
   `pagecity` varchar(100) NOT NULL,
   `pageimage` varchar(100) NOT NULL,
   `resortid` int(11) DEFAULT NULL,
-  `createdate` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updatedate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `pages_resort`
@@ -171,12 +171,12 @@ CREATE TABLE `pages_resort` (
 
 INSERT INTO `pages_resort` (`pageid`, `pagename`, `pagetitle`, `pagedescription`, `pageaddress`, `pagezipcode`, `pagecity`, `pageimage`, `resortid`, `createdate`, `updatedate`) VALUES
 (1, 'Hôtel Hypnos Arcachon', 'Bienvenue sur la page de l\'hôtel Hypnos d\'arcachon', 'Notre hôtel est niché au bord de l\'océan atlantique avec vue imprenable sur la baie d\'Arcachon.', '43 Boulevard de la Plage', 33120, 'Arcachon', 'arcachon.webp', 1, '2022-04-19 07:01:43', '2022-04-19 07:25:05'),
-(2, 'Page Pau', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 6, '2022-04-20 17:29:37', '2022-04-20 21:46:42'),
-(3, 'Page Brest', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 2, '2022-04-20 17:29:37', '2022-04-20 20:49:37'),
-(4, 'Versailles', 'Hypnos Versailles', 'Notre hôtel est idéalement situé à proximité du château et vous permettra de flâner dans ses jardin et son orangeraie mondialement connue.', '1 Boulevard de la Reine', 78000, 'Versailles', 'Versailles.webp', 7, '2022-04-20 17:29:37', '2022-04-21 10:38:48'),
-(5, 'Page Megève', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 5, '2022-04-20 17:29:37', '2022-04-20 21:42:28'),
-(6, 'Page Cannes', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 3, '2022-04-20 17:29:37', '2022-04-20 21:42:57'),
-(7, 'Page Dauville', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 4, '2022-04-20 17:29:37', '2022-04-20 21:42:57');
+(2, 'Hôtel Hypnos Brest', 'Hypnos Brest', 'Description Brest', '41 Rue Branda', 29200, 'Brest', 'brest.webp', 2, '2022-04-20 17:29:37', '2022-04-22 10:55:03'),
+(3, 'Hôtel Hypnos Cannes', 'Hypnos Cannes', 'Description Cannes', '3 Rue la Fontaine', 6400, 'Cannes', 'cannes.webp', 3, '2022-04-20 17:29:37', '2022-04-22 10:55:17'),
+(4, 'Hôtel Hypnos Deauville', 'Hypnos Deauville', 'Description Deauville', '112 Rue Victor Hugo', 14800, 'Deauville', 'deauville.webp', 4, '2022-04-20 17:29:37', '2022-04-22 10:56:15'),
+(5, 'Hôtel Hypnos Megève', 'Hypnos Megève', 'Description Megève', '10 Rue des Allobroges', 74120, 'Megève', 'megeve.webp', 5, '2022-04-20 17:29:37', '2022-04-22 10:12:32'),
+(6, 'Hôtel Hypnos Pau', 'Hypnos Pau', 'Description Pau', '3 rue gambetta', 64000, 'Pau', 'pau.webp', 6, '2022-04-20 17:29:37', '2022-04-22 10:56:38'),
+(7, 'Hôtel Hypnos Versailles', 'Hypnos Versailles', 'Notre hôtel est idéalement situé à proximité du château et vous permettra de flâner dans ses jardin et son orangeraie mondialement connue.', '1 Boulevard de la Reine', 78000, 'Versailles', 'versailles.webp', 7, '2022-04-20 17:29:37', '2022-04-22 10:56:48');
 
 -- --------------------------------------------------------
 
@@ -191,8 +191,8 @@ CREATE TABLE `reservations` (
   `useremail` varchar(100) DEFAULT NULL,
   `datein` varchar(100) DEFAULT NULL,
   `dateout` varchar(100) DEFAULT NULL,
-  `usercomment` text DEFAULT NULL,
-  `createdate` timestamp NULL DEFAULT current_timestamp(),
+  `usercomment` text,
+  `createdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `status` int(11) DEFAULT NULL,
   `cancelledby` varchar(5) DEFAULT NULL,
   `updatedate` timestamp NULL DEFAULT NULL
@@ -203,13 +203,13 @@ CREATE TABLE `reservations` (
 --
 
 INSERT INTO `reservations` (`bookingid`, `suiteid`, `resortid`, `useremail`, `datein`, `dateout`, `usercomment`, `createdate`, `status`, `cancelledby`, `updatedate`) VALUES
-(1, 1, NULL, 'alain.broye39@gmail.com', '2022-04-30', '2022-05-07', 'Test réservation', '2022-04-19 19:00:36', 0, '', NULL),
-(2, 1, NULL, 'laurence.estellon@gmail.com', '2022-04-29', '2022-05-01', 'Réservation Laurence', '2022-04-20 16:58:56', 1, NULL, NULL),
-(3, 7, NULL, 'alain.broye@live.fr', '2022-04-22', '2022-04-24', 'Réservation Alain', '2022-04-20 17:31:15', 2, 'a', NULL),
-(4, 2, NULL, 'alain.broye39@gmail.com', '2022-05-01', '2022-05-01', 'Vacances', '2022-04-20 18:08:34', 0, NULL, NULL),
-(5, 1, NULL, 'alain.broye39@gmail.com', '2022-05-01', '2022-06-01', 'Vacances du 01/05/2022 au 01/06/2022 Alain', '2022-04-20 18:14:21', 0, NULL, NULL),
-(6, 4, NULL, 'alain.broye39@gmail.com', '2022-04-21', '2022-04-22', 'Ma Ninnie Love', '2022-04-20 18:15:03', 0, NULL, NULL),
-(7, 1, NULL, 'alain.broye39@gmail.com', '2022-05-01', '2022-05-03', 'jjnkjnkj', '2022-04-20 21:11:58', 0, NULL, NULL);
+(1, 1, NULL, 'user@gmail.com', '2022-04-30', '2022-05-07', 'Test réservation', '2022-04-19 19:00:36', 0, '', NULL),
+(3, 7, NULL, 'user@gmail.com', '2022-04-22', '2022-04-24', 'Réservation Alain', '2022-04-20 17:31:15', 2, 'a', NULL),
+(4, 2, NULL, 'user@gmail.com', '2022-05-01', '2022-05-01', 'Vacances', '2022-04-20 18:08:34', 0, NULL, NULL),
+(5, 1, NULL, 'user@gmail.com', '2022-05-01', '2022-06-01', 'Vacances du 01/05/2022 au 01/06/2022 Alain', '2022-04-20 18:14:21', 0, NULL, NULL),
+(6, 4, NULL, 'user@gmail.com', '2022-04-21', '2022-04-22', 'Ma Ninnie Love', '2022-04-20 18:15:03', 0, NULL, NULL),
+(7, 1, NULL, 'user@gmail.com', '2022-05-01', '2022-05-03', 'jjnkjnkj', '2022-04-20 21:11:58', 0, NULL, NULL),
+(8, 3, NULL, 'user@gmail.com', '2022-04-23', '2022-04-30', 'Test resa ', '2022-04-21 22:01:43', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -226,22 +226,22 @@ CREATE TABLE `resorts` (
   `resortdescription` text NOT NULL,
   `resortimage` varchar(100) NOT NULL,
   `managerid` int(11) DEFAULT NULL,
-  `createdate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updatedate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updatedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `resorts`
 --
 
 INSERT INTO `resorts` (`resortid`, `resortname`, `resortaddress`, `resortzipcode`, `resortcity`, `resortdescription`, `resortimage`, `managerid`, `createdate`, `updatedate`) VALUES
-(1, 'Hypnos Arcachon', '43 Boulevard de la Plage', 33120, 'Arcachon', 'Description Hypnos Megève', 'arcachon.webp', 2, '2022-04-19 06:38:25', '2022-04-19 06:38:25'),
-(2, 'Hypnos Brest', '41 Rue Branda', 29200, 'Brest', 'Description Hypnos Brest', 'brest.webp', 3, '2022-04-19 06:21:52', '2022-04-19 06:21:52'),
-(3, 'Hypnos Cannes', '3 Rue la Fontaine', 6400, 'Cannes', 'Description Hypnos Cannes', 'cannes.webp', 5, '2022-04-19 06:22:17', '2022-04-19 06:22:17'),
-(4, 'Hypnos Deauville', '112 Rue Victor Hugo', 14800, 'Deauville', 'Description Hypnos Deauville', 'deauville.webp', 6, '2022-04-19 06:24:41', '2022-04-19 06:24:41'),
-(5, 'Hypnos Megève', '10 Rue des Allobroges', 74120, 'Megève', 'Description Hypnos Megève', 'megeve.webp', 4, '2022-04-19 06:21:03', '2022-04-19 06:21:03'),
-(6, 'Hypnos Pau', '3 rue gambetta', 64000, 'Pau', 'Description Hypnos Pau', 'pau.webp', 5, '2022-04-20 18:40:15', '2022-04-20 18:40:15'),
-(7, 'Hypnos Versailles', '1 Boulevard de la Reine', 78000, 'Versailles', 'Hôtel hypnos Versailles', 'versailles.webp', 1, '2022-04-21 12:32:26', '2022-04-21 12:32:26');
+(1, 'Hypnos Arcachon', '43 Boulevard de la Plage', 33120, 'Arcachon', 'Hôtel description Hypnos Megève', 'arcachon.webp', 1, '2022-04-22 11:46:46', '2022-04-22 11:46:46'),
+(2, 'Hypnos Brest', '41 Rue Branda', 29200, 'Brest', 'Hôtel description Hypnos Brest', 'brest.webp', 2, '2022-04-22 11:46:30', '2022-04-22 11:46:30'),
+(3, 'Hypnos Cannes', '3 Rue la Fontaine', 6400, 'Cannes', 'Hôtel description Hypnos Cannes', 'cannes.webp', 3, '2022-04-22 11:46:53', '2022-04-22 11:46:53'),
+(4, 'Hypnos Deauville', '112 Rue Victor Hugo', 14800, 'Deauville', 'Hôtel description Hypnos Deauville', 'deauville.webp', 4, '2022-04-22 11:47:03', '2022-04-22 11:47:03'),
+(5, 'Hypnos Megève', '10 Rue des Allobroges', 74120, 'Megève', 'Hôtel description Hypnos Megève', 'megeve.webp', 5, '2022-04-22 11:47:13', '2022-04-22 11:47:13'),
+(6, 'Hypnos Pau', '3 rue gambetta', 64000, 'Pau', 'Hôtel description Hypnos Pau', 'pau.webp', 6, '2022-04-22 11:47:22', '2022-04-22 11:47:22'),
+(7, 'Hypnos Versailles', '1 Boulevard de la Reine', 78000, 'Versailles', 'Hôtel description hypnos Versailles', 'versailles.webp', 7, '2022-04-22 11:47:30', '2022-04-22 11:47:30');
 
 -- --------------------------------------------------------
 
@@ -251,16 +251,16 @@ INSERT INTO `resorts` (`resortid`, `resortname`, `resortaddress`, `resortzipcode
 
 CREATE TABLE `suites` (
   `suiteid` int(11) NOT NULL,
-  `suitename` varchar(100) DEFAULT NULL,
-  `suitetitle` varchar(200) DEFAULT NULL,
+  `suitename` varchar(100) NOT NULL,
+  `suitetitle` varchar(200) NOT NULL,
   `suitelocation` varchar(100) NOT NULL,
   `resortid` int(11) DEFAULT NULL,
-  `suiteprice` int(11) DEFAULT NULL,
-  `suiteservices` varchar(255) DEFAULT NULL,
-  `suitedescription` text DEFAULT NULL,
-  `suiteimage` varchar(100) DEFAULT NULL,
-  `createdate` timestamp NULL DEFAULT current_timestamp(),
-  `updatedate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `suiteprice` int(11) NOT NULL,
+  `suiteservices` varchar(255) NOT NULL,
+  `suitedescription` text NOT NULL,
+  `suiteimage` varchar(100) NOT NULL,
+  `createdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -273,9 +273,8 @@ INSERT INTO `suites` (`suiteid`, `suitename`, `suitetitle`, `suitelocation`, `re
 (3, 'Amandine', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Cannes', 3, 690, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-3.png', '2022-04-15 09:31:06', '2022-04-21 12:44:42'),
 (4, 'Élodie', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Deauville', 4, 590, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-4.png', '2022-04-15 20:19:56', '2022-04-21 12:44:52'),
 (5, 'Clémence', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Megève', 5, 990, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-5.png', '2022-04-15 21:50:07', '2022-04-21 12:45:03'),
-(6, 'Louise', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'hypnos Pau', 6, 590, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-6.png', '2022-04-18 19:45:06', '2022-04-21 12:45:14'),
-(7, 'Chloé', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Versailles', 7, 890, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-7.png', '2022-04-18 19:47:40', '2022-04-21 12:45:25'),
-(8, 'Gaëlle', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Arcachon', 1, 590, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-8.png', '2022-04-20 18:30:15', '2022-04-21 12:45:34');
+(6, 'Louise', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Pau', 6, 590, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-6.png', '2022-04-18 19:45:06', '2022-04-22 08:00:46'),
+(7, 'Chloé', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Hypnos Versailles', 7, 890, 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo a quos explicabo sint vero ad rem accusantium, ea iure dolor omnis laborum deleniti odit commodi fuga voluptatibus perferendis quidem velit!', 'room-7.png', '2022-04-18 19:47:40', '2022-04-21 12:45:25');
 
 -- --------------------------------------------------------
 
@@ -290,8 +289,8 @@ CREATE TABLE `users` (
   `phonenumber` char(10) DEFAULT NULL,
   `emailid` varchar(70) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
-  `createdate` timestamp NULL DEFAULT current_timestamp(),
-  `updatedate` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `createdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -299,10 +298,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `phonenumber`, `emailid`, `password`, `createdate`, `updatedate`) VALUES
-(6, 'Alain François', 'BROYE', '0607080910', 'alain.broye39@gmail.com', '93bdce74179ca1b91858d42048b6ec1e', '2022-04-19 15:38:18', '2022-04-20 17:54:35'),
-(7, 'Laurence', 'ESTELLON', '0607080910', 'laurence.estellon@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '2022-04-20 16:55:41', '2022-04-20 17:01:34'),
-(8, 'Alain', 'Broye', '0749839900', 'alain.broye@live.fr', '93bdce74179ca1b91858d42048b6ec1e', '2022-04-20 17:29:21', '2022-04-20 17:29:21'),
-(9, 'Laurence', 'Estellon', '0767801841', 'laurence.estellon@gmail.com', '7fb5aec2d5444ad2907b15e63a175b67', '2022-04-20 17:32:54', '2022-04-20 17:32:54');
+(6, 'Alain François', 'BROYE', '0607080910', 'user@gmail.com', 'f0258b6685684c113bad94d91b8fa02a', '2022-04-19 15:38:18', '2022-04-22 08:58:25');
 
 --
 -- Index pour les tables déchargées
@@ -408,31 +404,31 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT pour la table `pages_resort`
 --
 ALTER TABLE `pages_resort`
-  MODIFY `pageid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `pageid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `bookingid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `bookingid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `resorts`
 --
 ALTER TABLE `resorts`
-  MODIFY `resortid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `resortid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `suites`
 --
 ALTER TABLE `suites`
-  MODIFY `suiteid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `suiteid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
