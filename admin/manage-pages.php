@@ -150,8 +150,10 @@ $msg="La page du site a été mise à jour avec succès ";
 					</div>
 				</div>
 			</main>
-				<?php include('includes/footer.php');?>
-		</body>
+                <div class="footer">
+			    <?php include('includes/footer.php');?>
+		        </div>		
+		    </body>
 		<script>
 					ClassicEditor
 							.create( document.querySelector( '#editor' ) )

@@ -8,6 +8,8 @@ include('includes/config.php');
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="description" content="Notre chaîne de 7 hôtels aux quatre coins de l'hexagone vous propose des séjours en Amoureux dans un petit coin de Paradis et mettent à votre disposition un personnel d'exception.">
+      <meta name="keywords" content="hotel, hotel de charme, week-end en amoureux, coin de paradis, ambiance cozy">
       <title>Groupe hôtelier Hypnos | Hôtels de charme pour Amoureux</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -34,8 +36,8 @@ include('includes/config.php');
       {	
           ?>
 
-      <div class="container-fluid p-0">
-        <div class="container mb-5">
+      <div class="container-fluid mt-5 p-0">
+        <div class="container my-5">
 
           <div class="card shadow-lg border">
 
@@ -56,7 +58,7 @@ include('includes/config.php');
               <p class="text-muted mb-1"><?php echo htmlentities($result->pagezipcode);?></p>
               <p class="text-muted"><?php echo htmlentities($result->pagecity);?></p>
               <div class="d-flex justify-content-end">
-                <a href="suites-list.php?idhotel=<?php echo $result->resortid;?>">Voir nos suites</a>
+                <a class="btn btn-hypnos mb-4" href="suites-list.php?idhotel=<?php echo $result->resortid;?>">Voir nos suites</a>
               </div>
             </div>
 

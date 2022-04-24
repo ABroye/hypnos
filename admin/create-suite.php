@@ -135,15 +135,6 @@ if(isset($_POST['submit']))
 								</div>
 							</div>
 
-							<!-- <div class="row g-3 justify-content-center">
-								<div class="col-xl-7 col-lg-7">
-									<label for="location" class="col-form">Hôtel hypnos :</label>
-								</div>
-								<div class="col-xl-7 col-lg-7 justify-content-center">
-									<input type="text" class="form-control input mb-3" name="suitelocation" id="suitelocation" placeholder="Suite remantique avec vue sur le jardin à la Française" required>
-								</div>
-							</div> -->
-
 							<div class="row g-3 justify-content-center">
 								<div class="col-xl-7 col-lg-7">
 									<label for="price" class="col-form">Prix de la nuitée :</label>
@@ -201,7 +192,9 @@ if(isset($_POST['submit']))
 												echo 'Pas de resorts dans la base';
 											else
 											{
-												echo '<select class="form-select form-control input" name="choixHotel" onChange="MM_jumpMenu(\'parent\',this,0)">';
+												echo '
+												<label for="city" class="col-form">Affecter cette suite à un établissement :</label>
+												<select class="form-select form-control input" name="choixHotel" onChange="MM_jumpMenu(\'parent\',this,0)">';
 												foreach($resortsResults as $resort)
 												{
 													?>
@@ -235,7 +228,7 @@ if(isset($_POST['submit']))
 				</div>
 			</div>
 		</main>
-		<div class="">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

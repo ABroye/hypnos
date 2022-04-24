@@ -156,8 +156,13 @@ if(isset($_POST['submit']))
 										<a class="link" href="change-image-suite.php?imgid=<?php echo htmlentities($result->suiteid);?>"><button type="button" class="btn btn-hypnos">Changer l'image</button></a>
 									</div>
 								</div>
+								<div class="row g-3 justify-content-center"><!-- 4eme input -->
+								<div class="col-xl-7 col-lg-7">
+								<label for="resort" class="col-form">Affecter un hôtel à cette suite :</label>
+								</div>
+								<div class="col-xl-7 col-lg-7 justify-content-center">
 								<?php 
-									echo '<div class="row g-3 justify-content-center">';
+									//echo '<div class="row g-3 justify-content-center">';
 											
 									$sql = "SELECT * from resorts";
 									$query = $dbh -> prepare($sql);
@@ -185,10 +190,10 @@ if(isset($_POST['submit']))
 										echo '</select>';
 									}
 								?>
-
-
+                                </div>
+                        
 								<div class="d-flex justify-content-end">
-									<button type="submit" name="submit" class="btn btn-sm btn-hypnos mb-3">Mettre à jour</button>
+									<button type="submit" name="submit" class="btn btn-hypnos mb-3">Mettre à jour</button>
 								</div>
 								<?php }} ?>
 							</form>
@@ -196,7 +201,7 @@ if(isset($_POST['submit']))
 					</div>
 				</div>
 			</main>
-			<div class="container-fluid">
+			<div class="footer">
 				<?php include('includes/footer.php');?>
 			</div>
 		</body>

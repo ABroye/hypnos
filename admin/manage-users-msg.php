@@ -109,7 +109,7 @@ $msg="Message lu avec succès !";
 				</div>
 			</div>
 		</main>
-			<div class="fixed-bottom">
+			<div class="">
 				<?php include('includes/footer.php');?>
 			</div>
 	</body>

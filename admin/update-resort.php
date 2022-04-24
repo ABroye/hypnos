@@ -163,7 +163,7 @@ $msg="Détails de la suite mis à jour !";
 												if( $result->managerid == $manager->id )
 													$selected = ' selected="selected"';
 
-												echo '<option  value="'.$manager->id.'" '.$selected.'>'.$manager->firstname.'</option>';
+												echo '<option  value="'.$manager->id.'" '.$selected.'>'.$manager->firstname.' '.$manager->lastname.'</option>';
 												
 											}
 											echo '</select>';
@@ -172,7 +172,7 @@ $msg="Détails de la suite mis à jour !";
 								</div>
 
 								<div class="d-flex justify-content-end">
-									<button type="submit" name="submit" class="btn btn-sm btn-hypnos mb-3">Mettre à jour</button>
+									<button type="submit" name="submit" class="btn btn-hypnos mb-3">Mettre à jour</button>
 								</div>
 								<?php }} ?>
 							</form>
@@ -180,7 +180,7 @@ $msg="Détails de la suite mis à jour !";
 					</div>
 				</div>
 			</main>
-			<div class="">
+			<div class="footer">
 				<?php include('includes/footer.php');?>
 			</div>
 		</body>

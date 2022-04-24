@@ -94,7 +94,7 @@ else{
 				</div>
 			</div>
 		</main>
-		<div class="fixed-bottom">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

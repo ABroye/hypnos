@@ -19,7 +19,7 @@ include('includes/config.php');
     <?php include('includes/header.php');?>
     <main class="main">
       <div class="container-fluid p-0">
-        <div class="card-header shadow-lg border-top mb-5 mx-auto">
+        <div class="card-header shadow-lg border-top my-5 mx-auto">
           <h1>Bienvenue sur le site de la chaîne d'hôtels hypnos</h1>
         </div>
       </div>

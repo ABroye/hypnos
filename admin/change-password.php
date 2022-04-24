@@ -105,7 +105,7 @@ $error="Votre mot de passe actuel n'est pas valide...";
 					</form>
 				</div>
 			</main>
-			<div class="">
+			<div class="footer">
 				<?php include('includes/footer.php');?>
 			</div>
 		</body>

@@ -8,9 +8,9 @@ include('includes/config.php');
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="description" content="">
-      <meta name="keywords" content="">
-      <title>Liste des suites hôtels hypnos</title>
+      <meta name="description" content="Notre chaîne de 7 hôtels aux quatre coins de l'hexagone vous propose des séjours en Amoureux dans un petit coin de Paradis et mettent à votre disposition un personnel d'exception.">
+      <meta name="keywords" content="hotel, hotel de charme, week-end en amoureux, coin de paradis, ambiance cozy">
+      <title>Liste des hôtels hypnos</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
       <link href="css/mobile.css" rel="stylesheet" type="text/css" />
@@ -21,8 +21,8 @@ include('includes/config.php');
     <?php include('includes/header.php');?>
     <main class="main">
       <div class="container-fluid p-0">
-        <div class="card-header shadow-lg border-top mb-5 mx-auto">
-          <h1>Liste des suites de nos hôtels hypnos</h1>
+        <div class="card-header shadow-lg border-top my-5 mx-auto">
+          <h1>Liste de nos hôtels hypnos et de leur gérant</h1>
         </div>
       </div>
       <div class="container">
@@ -43,7 +43,7 @@ include('includes/config.php');
           <h4 class="text-muted">Fondateur d'hypnos</h4>
           <h4 class="text-muted">Directeur hypnos Versailles</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa dolore consequatur labore dolorem, dicta rerum eum similique ratione nemo.</p>
-          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=4">Voir l'établissement &raquo;</a></p>
+          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=7">Voir l'établissement &raquo;</a></p>
         </div>
       </div>
 
@@ -79,7 +79,7 @@ include('includes/config.php');
           <h2>Alice Shepard</h2>
           <h4 class="text-muted">Directrice Hypnos Brest</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa dolore consequatur labore dolorem, dicta rerum eum similique ratione nemo.</p>
-          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=3">Voir l'établissement &raquo;</a></p>
+          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=2">Voir l'établissement &raquo;</a></p>
         </div>
 
         <div class="col-lg-4">
@@ -115,7 +115,7 @@ include('includes/config.php');
           <h2>Anges Martin</h2>
           <h4 class="text-muted">Directrice Hypnos Cannes</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa dolore consequatur labore dolorem, dicta rerum eum similique ratione nemo.</p>
-          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=6">Voir l'établissement &raquo;</a></p>
+          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=3">Voir l'établissement &raquo;</a></p>
         </div>
 
         <div class="col-lg-4">
@@ -132,7 +132,7 @@ include('includes/config.php');
           <h2>Éric Turpin</h2>
           <h4 class="text-muted">Directeur Hypnos Deauville</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa dolore consequatur labore dolorem, dicta rerum eum similique ratione nemo.</p>
-          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=7">Voir l'établissement &raquo;</a></p>
+          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=4">Voir l'établissement &raquo;</a></p>
         </div>
 
         <div class="col-lg-4">
@@ -149,7 +149,7 @@ include('includes/config.php');
           <h2>Julie Hieronimus</h2>
           <h4 class="text-muted">Directrice Hypnos Pau</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit culpa dolore consequatur labore dolorem, dicta rerum eum similique ratione nemo.</p>
-          <p><a class="btn btn-hypnos mt-auto" href="resort.php?resortid=6">Voir l'établissement &raquo;</a></p>
+          <p><a class="btn btn-hypnos mt-auto" href="resort.php?pageid=6">Voir l'établissement &raquo;</a></p>
         </div>
       </div>
     </div>

@@ -85,15 +85,15 @@ if($query->rowCount() > 0)//Admin trouvé et ok
 							</div>
 
 							<div class="card-body pt-3">
-
+                                <p style="color: red">Gérant : c.de-pontignac@hypnos-group.com</p>
 								<div class="form-floating mx-5 my-3">
 									<input type="text" name="username" class="form-control" id="floatingInput" placeholder="Identifiant" required="">
-									<label for="floatingInput">Identifiant</label>
+									<label for="floatingInput">admin</label>
 								</div>
 
 								<div class="form-floating mx-5 mb-3">
 									<input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required="">
-									<label for="floatingPassword">Mot de passe</label>
+									<label for="floatingPassword">Demo</label>
 								</div>
 
 								<div class="checkbox mb-3">

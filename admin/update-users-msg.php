@@ -98,6 +98,9 @@ window.print();
           <td class="fontkink" align="justify" ><?php echo htmlentities($result->responsedate);?></td>
         </tr>
       <?php }}}?>
+      <div class="footer">
+	    <?php include('includes/footer.php');?>
+	  </div>
   </body>
 </html>
 <?php } ?>

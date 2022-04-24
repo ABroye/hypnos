@@ -97,7 +97,7 @@ $msg="Image mise à jour avec succès !";
 				</div>
 			</div>
 		</main>
-		<div class="container-fluid">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

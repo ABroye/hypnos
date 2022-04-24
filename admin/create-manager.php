@@ -154,7 +154,7 @@ $error="Quelque chose s'est mal passé. Veuillez réessayer";
 				</div>
 			</div>
 		</main>
-		<div class="">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

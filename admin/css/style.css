@@ -195,3 +195,12 @@ th{
 table tr td:last-child{
   width: 200px
 }
+
+.footer{
+    position:stiky;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-top:1rem;
+}
+}

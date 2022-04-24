@@ -185,6 +185,23 @@ h2 {
   box-shadow: 0 0 0 0.25rem rgba(192, 164, 113, 0.5)
 }
 
+.btn-booking {
+  color: blue;
+  background-color: #fff;
+  border-color: blue
+}
+.btn-booking:hover {
+  color: #fff;
+  background-color: blue;
+  border-color: blue
+}
+.btn-check:focus + .btn-booking, .btn-booking:focus {
+  color: #fff;
+  background-color: blue;
+  border-color: blue;
+  box-shadow: 0 0 0 0.25rem rgba(O, 0, 255, 0.5)
+}
+
 .accueil {
   border: 3px solid rgb(192, 164, 113);
 }
@@ -280,4 +297,44 @@ h2 {
   border-color: rgb(192, 164, 113) !important;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(192, 164, 113, 0.5) !important;
+}
+
+.zoom{      
+  -webkit-transition: all 0.35s ease-in-out;    
+  -moz-transition: all 0.35s ease-in-out;    
+  transition: all 0.35s ease-in-out;     
+  cursor: -webkit-zoom-in;      
+  cursor: -moz-zoom-in;      
+  cursor: zoom-in;  
+}     
+  
+.zoom:hover,  
+.zoom:active,   
+.zoom:focus {
+
+  -ms-transform: scale(1.2);    
+  -moz-transform: scale(1.2);  
+  -webkit-transform: scale(1.2);  
+  -o-transform: scale(1.2);  
+  transform: scale(1.2);    
+  position:relative;      
+  z-index:100;  
+}
+
+.carousel-indicators li {
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease
 }

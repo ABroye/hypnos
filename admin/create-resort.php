@@ -127,7 +127,7 @@ $error="Quelque chose s'est mal passé. Veuillez réessayer";
 								</div>
 
 								<div class="col-xl-7 col-lg-7 justify-content-center">
-									<input type="file" name="resortimage" class="form-control" id="resortimage"aria-describedby="inputFile" aria-label="Télécharger">
+									<input type="file" name="resortimage" class="form-control" id="resortimage" aria-describedby="inputFile" aria-label="Télécharger">
 								</div>
 
 								<div class="d-flex justify-content-end">
@@ -143,7 +143,7 @@ $error="Quelque chose s'est mal passé. Veuillez réessayer";
 
 			</div><!-- Fin du container -->
 		</main>
-		<div class="">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

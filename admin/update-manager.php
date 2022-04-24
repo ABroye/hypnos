@@ -166,7 +166,7 @@ $msg="Détails de la suite mis à jour !";
 					</div>
 				</div>
 			</main>
-			<div class="container-fluid">
+			<div class="footer">
 				<?php include('includes/footer.php');?>
 			</div>
 		</body>

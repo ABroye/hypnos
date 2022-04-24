@@ -20,15 +20,25 @@
     width: 26px;
   }
 
-  h2{
+  h1{
     font-size: medium;
     padding-top: 8px
   }
 
+  h2{
+    font-size: medium;
+    padding-top: 8px
+  }
+  
   h4{
     font-size: medium;
   }
 
+  h5{
+    font-size: medium;
+    padding-top: 8px
+  }
+  
   p{
     font-size: small;
   }

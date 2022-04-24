@@ -35,6 +35,8 @@ $error="Quelque chose s'est mal passé, merci de renouveler votre demande...";
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Notre chaîne de 7 hôtels aux quatre coins de l'hexagone vous propose des séjours en Amoureux dans un petit coin de Paradis et mettent à votre disposition un personnel d'exception.">
+    <meta name="keywords" content="hotel, hotel de charme, week-end en amoureux, coin de paradis, ambiance cozy">
     <title>Groupe hôtelier Hypnos | Hôtels de charme pour Amoureux</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
@@ -69,7 +71,7 @@ $error="Quelque chose s'est mal passé, merci de renouveler votre demande...";
     <form name="book" method="post">
 
     <div class="container-fluid p-0">
-      <div class="card-header shadow-lg border-top mb-5 mx-auto">
+      <div class="card-header shadow-lg border-top my-5 mx-auto">
         <h2>Détail de notre suite <?php echo htmlentities($result->suitename);?></h2>
       </div>
     </div>
@@ -85,7 +87,21 @@ $error="Quelque chose s'est mal passé, merci de renouveler votre demande...";
           <?php }?>
     <div class="container">
       <div class="card rounded-0 mb-5">
-        <img src="admin/suitesimages/<?php echo htmlentities($result->suiteimage);?>" class="card-img-top p-3" alt="">
+        <div class="p-carousel mb-5">
+          <div class="carousel slide" data-ride="carousel" id="carousel-1">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active"><img class="card-img-top px-3 w-100 d-block" src="admin/suitesimages/<?php echo htmlentities($result->suiteimage);?>" alt="Slide Image"></div>
+              <div class="carousel-item"><img class="card-img-top px-3 w-100 d-block" src="admin/suitesimages/<?php echo htmlentities($result->suiteimage);?>" alt="Slide Image"></div>
+              <div class="carousel-item"><img class="card-img-top px-3 w-100 d-block" src="admin/suitesimages/<?php echo htmlentities($result->suiteimage);?>" alt="Slide Image"></div>
+            </div>
+            <div><a class="carousel-control-prev" href="#carousel-1"  role="button" data-slide="prev"><span  class="carousel-control-prev-icon"></span><span  class="sr-only">Previous</span></a><a  class="carousel-control-next" href="#carousel-1"   role="button" data-slide="next"><span   class="carousel-control-next-icon"></span><span   class="sr-only">Next</span></a></div>
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+                <li data-target="#carousel-1" data-slide-to="2"></li>
+              </ol>
+            </div>
+          </div>
         <div class="card-body">
           <h2><?php echo htmlentities($result->suitename);?></h2>
           <p class="card-text text-muted visually-hidden">Suite - <?php echo htmlentities($result->suiteid);?></p>
@@ -108,25 +124,26 @@ $error="Quelque chose s'est mal passé, merci de renouveler votre demande...";
             <div class="col col-xl-3 col-lg-3 label">
               <label class="col-form-label">Commentaire : </label>
             </div>
-            <div class="col col-xl-7 col-lg-7 mb-3">
+            <div class="col col-xl-7 col-lg-7">
               <textarea class="form-control input" style="height: 100px" type="text" name="usercomment" required=""></textarea>
             </div>
-
+            <div class="d-flex justify-content-end my-3">
+                <h5>Prix de la nuit : <?php echo htmlentities($result->suiteprice);?>,00 €</h5>
+            </div>
             <?php if($_SESSION['login'])
             {?>
-            <div class="d-flex justify-content-end pb-3">
+                        <div class="d-flex justify-content-end pb-3">
               <button type="submit" name="submit2" class="btn btn-hypnos">Réserver</button>
             </div>
               <?php } else {?>
             <div class="d-flex justify-content-end pb-3">
-              <a href="https://www.booking.com" target="_blank"><button type="button" class="btn btn-primary shadow me-4">Booking.com</button></a>
-              <a href="#" type="submit2" data-bs-toggle="modal" data-bs-target="#Modal1" class="btn btn-hypnos" >Réserver</a></li>
+              <a href="https://www.booking.com" target="_blank"><button type="button" class="btn btn-booking shadow me-4">Booking.com</button></a>
+              <a href="#" type="submit2" data-bs-toggle="modal" data-bs-target="#Modal1" class="btn btn-hypnos shadow" >Réserver</a>
               <?php } ?>
             </div>
-            <div class="d-flex justify-content-end pb-3">
+            <div class="d-flex justify-content-end pb-3 ms-4">
               <a href="suites-list.php" target="_self"><button type="button" class="btn btn-hypnos shadow">Retour aux suites</button></a>
             </div>
-
           </div>
         </div>
       </div>
@@ -137,6 +154,7 @@ $error="Quelque chose s'est mal passé, merci de renouveler votre demande...";
     <?php }} ?>
     <script src="js/scrollToTop.js"></script>	
     <script src="js/navbar-scrolled.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <?php include('includes/tabbar.php');?>
       <?php include('includes/footer.php');?>
       <?php include('includes/signup.php');?>			

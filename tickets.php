@@ -21,7 +21,7 @@ else{
 			<link href="css/scrollToTop.css" rel="stylesheet" type="text/css" />
 		</head>
 	<body>
-		<?php include('includes/header.php');?>
+			<?php include('includes/header.php');?>
 		<main class="main mb-5">
 			<?php if($error){?>
       <div class="container-fluid shadow border-bottom alert alert-danger">
@@ -52,11 +52,9 @@ else{
             foreach($results as $result)
             {	
               ?>
-            <div class="card border-0">
-            <div class="card-header">
+            <div class="card-header border-top mt-3">
                 N° de réclamation : <?php echo htmlentities($result->id);?>
               </div>
-              <div class="card-body">
                 <form name="chngpwd" method="post" onSubmit="return valid();">
                   <div class="accordion" id="accordion">
                     <div class="accordion-item">
@@ -89,11 +87,9 @@ else{
                     </div>
                   </div>
                 </form>  
-              </div>
             <?php }?>
               
             </div>
-          </div>
         </div>
       </div>
     </main>

@@ -182,7 +182,7 @@ $error="Quelque chose s'est mal passé. Veuillez réessayer";
 
 								<div class="row g-3 justify-content-center"><!-- 4eme input -->
 									<div class="col-xl-7 col-lg-7">
-										<label for="city" class="col-form">Choisissez votre établissement :</label>
+										<label for="city" class="col-form">Choisir un établissement :</label>
 									</div>
 									<div class="col-xl-7 col-lg-7 justify-content-center">
 
@@ -251,7 +251,7 @@ $error="Quelque chose s'est mal passé. Veuillez réessayer";
 				</div>
 			</div>
 		</main>
-		<div class="">
+		<div class="footer">
 			<?php include('includes/footer.php');?>
 		</div>
 	</body>

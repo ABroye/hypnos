@@ -54,13 +54,7 @@
     width: 100%;
   }
 
-  .footer{
-    font-size: small;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+ 
 
 }
 /* iPad paysage */
@@ -79,12 +73,7 @@
     margin-top: 0;
   }
 
-  .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+ 
 
 }
 /* MacBook Air */ 
@@ -99,22 +88,12 @@
     margin-top: 0 !important;
   }
 
-  .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  
 
 }
 
 /* iMac et autres grands écrans */ 
 @media (min-width: 1400px) {
   
-  .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  
 }
