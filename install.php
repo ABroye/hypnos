@@ -33,7 +33,7 @@
         $conn->query($tab[$i]);
         $i+=1;
     }
-    echo "La base de données a été créée avec succès... Merci de supprimer les fichiers index.html et install.php";
+    echo "La base de données a été créée avec succès... Merci de supprimer les fichiers index.html, install.php et sql_hypnos.sql";
     header("Refresh:8;url=index.php");
   }
   
