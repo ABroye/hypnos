@@ -91,7 +91,7 @@ CREATE TABLE `msg` (
   `message` mediumtext DEFAULT NULL,
   `postingdate` timestamp NULL DEFAULT current_timestamp(),
   `status` int(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `msg`
@@ -114,7 +114,7 @@ CREATE TABLE `msg_users` (
   `postingdate` timestamp NULL DEFAULT current_timestamp(),
   `responseresort` mediumtext DEFAULT NULL,
   `responsedate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `msg_users`
@@ -134,7 +134,7 @@ CREATE TABLE `pages` (
   `id` int(11) NOT NULL,
   `type` varchar(255) DEFAULT '',
   `detail` longtext DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `pages`
@@ -164,7 +164,7 @@ CREATE TABLE `pages_resort` (
   `resortid` int(11) DEFAULT NULL,
   `createdate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updatedate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `pages_resort`
@@ -197,7 +197,7 @@ CREATE TABLE `reservations` (
   `status` int(11) DEFAULT NULL,
   `cancelledby` varchar(5) DEFAULT NULL,
   `updatedate` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `reservations`
@@ -230,7 +230,7 @@ CREATE TABLE `resorts` (
   `managerid` int(11) DEFAULT NULL,
   `createdate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `resorts`
@@ -263,7 +263,7 @@ CREATE TABLE `suites` (
   `suiteimage` varchar(100) DEFAULT NULL,
   `createdate` timestamp NULL DEFAULT current_timestamp(),
   `updatedate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `suites`
@@ -293,7 +293,7 @@ CREATE TABLE `users` (
   `password` varchar(100) DEFAULT NULL,
   `createdate` timestamp NULL DEFAULT current_timestamp(),
   `updatedate` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `users`
